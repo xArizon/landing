@@ -1,0 +1,87 @@
+.value {
+	width: 100%;
+	height: 65vh;
+	background-color: #060e11;
+	min-height: 600px;
+	.container {
+		.pluses {
+			width: 100%;
+			height: 350px;
+			align-self: center;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		.pluses__item {
+			cursor: pointer;
+			border: 1px solid rgba(0, 204, 255, 0.055);
+			width: 30%;
+			height: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			overflow: hidden;
+
+			transition: all 0.3s ease-in-out;
+
+			& .pluses__logo {
+				height: 60%;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				& img {
+					width: 30%;
+				}
+				& span {
+					font-size: 17px;
+					text-align: center;
+					margin: 20px auto;
+					font-family: $text-font;
+					color: #ffff;
+					letter-spacing: 3px;
+				}
+				& span::first-letter {
+					font-size: 21px;
+				}
+			}
+
+			& .pluses__text {
+				width: 95%;
+				height: 30%;
+				padding: 0 10px 10px 10px;
+				text-align: center;
+				font-family: $text-font;
+				font-size: 0;
+				color: #ffff;
+				letter-spacing: 1px;
+				line-height: 1.2;
+			}
+			& button {
+				width: 30px;
+				background: rgba(0, 0, 0, 0);
+				transform: rotate(90deg);
+				transition: transform 0.2s ease-in-out;
+				margin-bottom: 20px;
+				& img {
+					width: 100%;
+				}
+			}
+		}
+		.pluses__item.active {
+			height: 350px;
+			border: 1px solid rgb(0, 204, 255);
+		}
+		.pluses__item:hover {
+			overflow-y: auto;
+		}
+	}
+
+	&__item {
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+}

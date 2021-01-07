@@ -1,0 +1,33 @@
+@import 'clearfix.scss';
+@import 'variables.scss';
+@import 'animation.scss';
+@import 'font-face.scss';
+// Clearfix-scrollbar
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0;
+}
+
+::-webkit-scrollbar-track {
+	width: 0;
+	height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+	width: 0;
+	height: 0;
+}
+
+// First section
+@import 'header.scss';
+
+// Second section
+@import 'value.scss';
+// Third section
+@import 'calculator.scss';
+//Fourth section
+@import 'contacts.scss';
+//media-запросы
+@import 'media.scss';
+// Glitch animation
+@import 'order.scss';

@@ -1,0 +1,443 @@
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.header {
+		min-height: none;
+	}
+	.container {
+		max-width: 800px;
+	}
+	.calculator {
+		min-height: 600px;
+		&__main {
+			height: 60%;
+			min-width: 800px;
+			min-height: 500px;
+		}
+	}
+	.contacts {
+		&__elem {
+			width: 40%;
+		}
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	.header {
+		min-height: none;
+	}
+	.container {
+		max-width: 700px;
+	}
+	.calculator {
+		min-height: 600px;
+		&__main {
+			height: 60%;
+			min-width: 700px;
+			min-height: 500px;
+		}
+	}
+	.contacts {
+		min-height: 500px;
+		&__slider {
+			width: 600px;
+		}
+		&__elem {
+			width: 20%;
+		}
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.header {
+		min-height: none;
+		position: relative;
+	}
+
+	.module {
+		display: flex;
+		z-index: 5;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		transition: transform 0.35s ease;
+		background: rgb(1, 0, 20);
+		transform: translateX(1000px);
+		justify-content: center;
+		align-items: center;
+
+		&__menu {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 40%;
+			min-height: 300px;
+		}
+		&__item {
+			text-align: center;
+			& a {
+				font-size: 35px;
+				color: #fff;
+				letter-spacing: 5px;
+				text-transform: uppercase;
+				font-family: $text-font;
+			}
+		}
+		&__burger {
+			margin: 0 auto;
+			width: 40px;
+			height: 35px;
+			margin-top: 15px;
+			position: relative;
+			border: 1px solid #fff;
+			display: flex;
+			justify-content: center;
+			transition: all 0.5s ease;
+		}
+
+		&__burger::after,
+		&__burger::before {
+			content: '';
+			position: absolute;
+			width: 60%;
+			height: 2px;
+			background: #fff;
+			top: 45%;
+		}
+		&__burger::after {
+			transform: rotate(-45deg);
+		}
+		&__burger::before {
+			transform: rotate(45deg);
+		}
+	}
+	.container {
+		max-width: 550px;
+		& .nav {
+			&__burger {
+				width: 40px;
+				height: 35px;
+				margin-top: 15px;
+				position: relative;
+				border: 1px solid #fff;
+				display: flex;
+				justify-content: center;
+				transition: all 0.5s ease;
+			}
+			&__burger:hover {
+				background: #c4c4c4;
+			}
+			&__burger:hover > &__burger::after {
+				transform: rotate(45deg);
+			}
+			&__burger::after,
+			&__burger::before {
+				content: '';
+				position: absolute;
+				width: 60%;
+				height: 2px;
+				background: #fff;
+			}
+			&__burger::after {
+				bottom: 30%;
+			}
+			&__burger::before {
+				top: 30%;
+			}
+
+			&__menu {
+				display: none;
+			}
+		}
+		& .main {
+			width: 65%;
+			height: 200px;
+			&__title {
+				font-size: 30px;
+			}
+			&__text {
+				font-size: 14px;
+			}
+		}
+	}
+	.value {
+		height: 1400px;
+		.container {
+			.pluses {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				align-items: center;
+
+				height: 1150px;
+				&__item {
+					width: 70%;
+				}
+			}
+		}
+	}
+	.calculator {
+		min-height: 800px;
+		&__main {
+			height: 60%;
+			min-width: 500px;
+			min-height: 700px;
+		}
+		&__price {
+			flex-direction: column;
+			width: 100%;
+		}
+		&__column {
+			width: 80%;
+		}
+	}
+	.contacts {
+		min-height: 500px;
+		&__slider {
+			width: 80%;
+			height: 40%;
+		}
+		&__skills {
+			width: 70%;
+			height: 90%;
+			& p {
+				font-size: 10px;
+			}
+		}
+		&__logo {
+			width: 25%;
+			line-height: 15px;
+			& img {
+			}
+			& h2 {
+				font-size: 16px;
+				letter-spacing: 1px;
+				margin: 5px 0 5px;
+			}
+			& p {
+				font-size: 10px;
+			}
+		}
+		&__slide {
+			& img {
+				height: 100%;
+			}
+			&--profile {
+				font-size: 13px;
+			}
+		}
+		&__elem {
+			& img {
+				width: 70%;
+			}
+		}
+	}
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 590px) {
+	.container {
+		min-width: 300px;
+		align-items: center;
+
+		& .nav {
+			min-width: 250px;
+			width: 90%;
+			&__logo {
+			}
+
+			&__menu {
+			}
+		}
+		& .main {
+			width: 90%;
+		}
+	}
+
+	.calculator {
+		&__title {
+			font-size: 18px;
+		}
+		&__item {
+			& label {
+				height: auto;
+				font-size: 12px;
+				padding: 7px 10px;
+				align-self: center;
+			}
+		}
+		&__column {
+			width: 100%;
+		}
+		&__button {
+			& button {
+				letter-spacing: 1px;
+				font-size: 15px;
+				height: 35px;
+				width: 140px;
+			}
+		}
+	}
+	.contacts {
+		&__logo {
+			width: 20%;
+			line-height: 13px;
+			& img {
+				min-width: 25px;
+				min-height: 25px;
+			}
+			& h2 {
+				font-size: 12px;
+			}
+			& p {
+				font-size: 8px;
+			}
+		}
+		&__skills {
+			width: 60%;
+		}
+		&__item {
+			width: 100%;
+			& p {
+				width: 20%;
+				font-size: 10px;
+			}
+		}
+		&__line {
+			width: 50px;
+		}
+	}
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+	.header {
+	}
+	.container {
+		min-width: 200px;
+	}
+	.module {
+		&__item {
+			& a {
+				font-size: 20px;
+			}
+		}
+	}
+	.nav {
+		&__logo {
+		}
+
+		&__menu {
+		}
+	}
+
+	.links {
+		&__item {
+		}
+	}
+	.social {
+		&__item {
+		}
+	}
+	.main {
+		&__title {
+			font-size: 10px;
+		}
+
+		&__text {
+		}
+
+		&__btn {
+		}
+	}
+	.value {
+		&__item {
+		}
+	}
+	.pluses {
+		&__item {
+		}
+
+		&__logo {
+		}
+
+		&__text {
+		}
+	}
+
+	.calculator {
+		&__main {
+			width: 96%;
+		}
+
+		&__title {
+		}
+
+		&__price {
+		}
+
+		&__column {
+		}
+
+		&__item {
+			& label{
+				font-size: 10px;
+				letter-spacing: 0.5px;
+			}
+		}
+
+		&__button {
+		}
+	}
+	.resultPrice {
+	}
+	.order {
+		&__form {
+		}
+
+		&__burger {
+		}
+
+		&__cost {
+		}
+
+		&__contact {
+		}
+	}
+	.contacts {
+		&__slider {
+		}
+
+		&__track {
+		}
+
+		&__slide {
+		}
+
+		&__slide--profile {
+		}
+
+		&__logo {
+		}
+
+		&__skills {
+		}
+
+		&__item {
+		}
+
+		&__line {
+		}
+
+		&__buttons {
+		}
+
+		&__elem {
+		}
+	}
+}

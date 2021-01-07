@@ -1,0 +1,116 @@
+.calculator {
+	width: 100%;
+	height: 80vh;
+	min-height: 800px;
+	background: url(img/7.jpg);
+	background-color: #74d1ddb7;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&__main {
+		width: 70%;
+		height: 70%;
+		min-width: 900px;
+		position: relative;
+	}
+	&__title {
+		text-align: center;
+		align-self: center;
+		font-family: $text-font;
+		vertical-align: middle;
+		padding: 10px 0;
+		font-size: 25px;
+		color: #ffffff;
+		letter-spacing: 3px;
+		word-spacing: 5px;
+		filter: blur(0.5px);
+		animation: neon 3s infinite;
+	}
+	&__price {
+		display: block;
+		height: 80%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__column {
+		height: 70%;
+		width: 45%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__item {
+		color: #fff;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		vertical-align: middle;
+		height: 30%;
+		font-family: $text-font;
+
+		& label {
+			align-self: center;
+			letter-spacing: 1px;
+			height: 40%;
+			border: 1px solid #1b76ab;
+			padding: 10px 15px;
+		}
+		& input {
+			align-self: center;
+		}
+		& input:not([type='number']) {
+			height: 100%;
+			width: 20px;
+			background-color: transparent;
+		}
+		& input:not([type='checkbox']) {
+			width: 80px;
+			height: 30%;
+			text-align: center;
+		}
+	}
+	&__button {
+		align-self: center;
+		display: block;
+		width: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 6;
+		& button {
+			height: 50px;
+			width: 180px;
+			padding: 5px 10px;
+			font-family: $text-font;
+			letter-spacing: 2px;
+			font-size: 18px;
+			transition: all 0.4s ease;
+			border: 1px solid #1b76ab;
+			color: #fff;
+			background-color: rgba(255, 255, 255, 0);
+		}
+		& button:hover {
+			color: transparent;
+			text-shadow: 1px 1px 1px #fff;
+			border: 1px solid rgba(255, 255, 255, 0);
+			box-shadow: inset 0px 50px #1b76ab;
+		}
+	}
+}
+
+.calculator::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.651);
+	z-index: 0;
+}
