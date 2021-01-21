@@ -13,8 +13,10 @@ btnMain.addEventListener("click",function(){
 });
 
 
-burgerOrder.addEventListener("click",()=> {orderItem.style.display="none"})
-
+burgerOrder.addEventListener("click",hideOrder)
+function hideOrder(){
+    orderItem.style.display="none"
+}
 for(let i  =0;i<plusesItem.length;i++){
    
             plusesItem[i].addEventListener("click",function(){
@@ -107,13 +109,42 @@ let headerBurger1 = document.getElementsByClassName("nav__burger")[0],
 headerBurger2 = document.getElementsByClassName("module__burger")[0],
 burgerMenu=document.getElementsByClassName("module")[0];
 
-headerBurger1.onclick=function(){
-  //  burgerMenu.style.display="flex";
+headerBurger1.addEventListener("click",showMenu);
+headerBurger2.addEventListener("click",hideMenu);
+function showMenu(){
     burgerMenu.style.visibility="visible";
     burgerMenu.style.transform="translateX(0px)";
 }
-headerBurger2.onclick=function(){
+function hideMenu(){
     burgerMenu.style.visibility="hidden";
-    //burgerMenu.style.display="none";
     burgerMenu.style.transform="translateX(1000px)";
+}
+
+// headerBurger1.onclick=function(){
+//   //  burgerMenu.style.display="flex";
+//     burgerMenu.style.visibility="visible";
+//     burgerMenu.style.transform="translateX(0px)";
+// }
+// headerBurger2.onclick=function(){
+//     burgerMenu.style.visibility="hidden";
+//     //burgerMenu.style.display="none";
+//     burgerMenu.style.transform="translateX(1000px)";
+// }
+
+// Координация по сайту
+
+const anchors = document.querySelectorAll("a[href*='#'");
+
+for(let anchor of anchors){
+    anchor.addEventListener("click",function(e){
+    e.preventDefault();
+    hideMenu();
+    hideOrder();
+    const blockID = anchor.getAttribute('href');
+    
+    document.querySelector(""+blockID).scrollIntoView({
+        block: "center",
+        behavior: "smooth"
+    });
+    });
 }

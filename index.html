@@ -13,12 +13,10 @@
 			<div class="module">
 				<div class="module__menu">
 					<div class="module__burger"></div>
-					<div class="module__item"><a href="#">about</a></div>
-					<div class="module__item"><a href="#">work</a></div>
-					<div class="module__item"><a href="#">portfolio</a></div>
-					<div class="module__item"><a href="#">contact</a></div>
+					<div class="module__item link"><a href="#plus">преимущества</a></div>
+					<div class="module__item link"><a href="#calc">калькулятор</a></div>
+					<div class="module__item link"><a href="#contacts">портфолио</a></div>
 				</div>
-
 			</div>
 
 			<div class="container">
@@ -31,10 +29,9 @@
 
 					<div class="nav__menu">
 						<div class="links">
-							<div class="links__item"><a href="#">about</a></div>
-							<div class="links__item"><a href="#">work</a></div>
-							<div class="links__item"><a href="#">portfolio</a></div>
-							<div class="links__item"><a href="#">contact</a></div>
+							<div class="links__item link"><a href="#plus">преимущества</a></div>
+							<div class="links__item link"><a href="#calc">калькулятор</a></div>
+							<div class="links__item link"><a href="#contacts">портфолио</a></div>
 						</div>
 						<div class="social">
 							<div class="social__item">
@@ -50,12 +47,12 @@
 				<main class="main">
 					<p class="main__title">Вам нужен Web-сайт?</p>
 					<p class="main__text">Занимаюсь Web-разработкой с 2018 года</p>
-					<button class="main__btn">Связаться</button>
+					<a href="#contacts"><button class="main__btn link">Связаться</button></a>
 				</main>
 			</div>
 		</header>
 
-		<div class="value">
+		<div class="value" id="plus">
 			<div class="value__item container">
 				<ul class="pluses">
 					<li class="pluses__item">
@@ -97,7 +94,7 @@
 			</div>
 		</div>
 
-		<div class="calculator">
+		<div class="calculator" id="calc">
 			<div class="container calculator__main">
 				<h2 class="calculator__title">Калькулятор цен</h2>
 				<div class="calculator__price">
@@ -139,12 +136,12 @@
 					<div class="order__burger"></div>
 					<div class="order__cost"></div>
 					<button class="order__contact">
-						<span>Связаться</span><img src="css/img/right-arrow.png" alt="" />
+						<a href="#contacts" class="link">Связаться</a><img src="css/img/right-arrow.png" alt="" />
 					</button>
 				</div>
 			</div>
 		</div>
-		<div class="contacts">
+		<div class="contacts" id="contacts">
 			<div class="contacts__slider">
 				<div class="contacts__track">
 					<div class="contacts__slide contacts__slide--profile">

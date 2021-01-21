@@ -40,6 +40,18 @@
 			min-width: 700px;
 			min-height: 500px;
 		}
+		& .order {
+			&__form {
+			}
+			&__cost {
+				font-size: 15px;
+			}
+			&__contact {
+				& span {
+					font-size: 15px;
+				}
+			}
+		}
 	}
 	.contacts {
 		min-height: 500px;
@@ -81,7 +93,7 @@
 		&__item {
 			text-align: center;
 			& a {
-				font-size: 35px;
+				font-size: 25px;
 				color: #fff;
 				letter-spacing: 5px;
 				text-transform: uppercase;
@@ -194,6 +206,25 @@
 		}
 		&__column {
 			width: 80%;
+		}
+		& .order {
+			min-width: 200px;
+			&__form {
+				width: 90%;
+				height: 300px;
+			}
+			&__cost {
+				font-size: 12px;
+				letter-spacing: 1px;
+				width: 80%;
+				box-shadow: -8px -8px 0px rgba(0, 0, 0, 0.342),
+					8px 8px rgba(0, 0, 0, 0.973), inset 5px 100px rgba(0, 0, 0, 0.808);
+			}
+			&__contact {
+				& span {
+					font-size: 13px;
+				}
+			}
 		}
 	}
 	.contacts {
@@ -320,11 +351,15 @@
 	}
 	.container {
 		min-width: 200px;
+		min-height: 200px;
 	}
 	.module {
+		&__menu{
+			min-height: 250px;
+		}
 		&__item {
 			& a {
-				font-size: 20px;
+				font-size: 14px;
 			}
 		}
 	}
@@ -371,7 +406,9 @@
 	}
 
 	.calculator {
+		min-height: 500px;
 		&__main {
+			min-height: 400px;
 			width: 96%;
 		}
 
@@ -385,7 +422,7 @@
 		}
 
 		&__item {
-			& label{
+			& label {
 				font-size: 10px;
 				letter-spacing: 0.5px;
 			}
@@ -410,6 +447,7 @@
 		}
 	}
 	.contacts {
+		min-height: 400px;
 		&__slider {
 		}
 
@@ -417,21 +455,32 @@
 		}
 
 		&__slide {
+			padding: 15px 10px;
 		}
 
 		&__slide--profile {
 		}
 
 		&__logo {
+			& h2 {
+				font-size: 9px;
+			}
+			& p {
+				font-size: 6px;
+			}
 		}
 
 		&__skills {
 		}
 
 		&__item {
+			& p {
+				font-size: 9px;
+			}
 		}
 
 		&__line {
+			width: 30px;
 		}
 
 		&__buttons {
