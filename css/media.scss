@@ -354,7 +354,7 @@
 		min-height: 200px;
 	}
 	.module {
-		&__menu{
+		&__menu {
 			min-height: 250px;
 		}
 		&__item {
@@ -487,6 +487,7 @@
 		}
 
 		&__elem {
+			background-color: transparent;
 		}
 	}
 }

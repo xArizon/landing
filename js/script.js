@@ -120,16 +120,6 @@ function hideMenu(){
     burgerMenu.style.transform="translateX(1000px)";
 }
 
-// headerBurger1.onclick=function(){
-//   //  burgerMenu.style.display="flex";
-//     burgerMenu.style.visibility="visible";
-//     burgerMenu.style.transform="translateX(0px)";
-// }
-// headerBurger2.onclick=function(){
-//     burgerMenu.style.visibility="hidden";
-//     //burgerMenu.style.display="none";
-//     burgerMenu.style.transform="translateX(1000px)";
-// }
 
 // Координация по сайту
 
@@ -141,10 +131,19 @@ for(let anchor of anchors){
     hideMenu();
     hideOrder();
     const blockID = anchor.getAttribute('href');
-    
-    document.querySelector(""+blockID).scrollIntoView({
-        block: "center",
-        behavior: "smooth"
-    });
+    if(blockID!="#plus"){
+        document.querySelector(""+blockID).scrollIntoView({
+            block: "center",
+            behavior: "smooth"
+        });
+       
+
+    }
+    else{
+        document.querySelector(""+blockID).scrollIntoView({ 
+            behavior: "smooth"
+        });
+    }
+  
     });
 }
