@@ -8,9 +8,13 @@ burgerOrder=document.querySelector(".order__burger"),
 orderItem=document.querySelector(".order"),
 btnMain = document.getElementsByClassName("main__btn")[0];
 
-btnMain.addEventListener("click",function(){
- 
-});
+let quantityBlocks=+document.getElementById("quantityBlocks").value,
+  responsive=document.getElementById("responsive") ,
+  sliders=+document.getElementById("sliders").value,
+  addFunctional=document.getElementById("addFunctional"),
+  moreAnimation=document.getElementById("moreAnimation"),
+  sale=document.getElementById("sale"),
+  sum=0,res=document.querySelector(".order__cost")  ;
 
 
 burgerOrder.addEventListener("click",hideOrder)
@@ -44,26 +48,20 @@ mainItem.addEventListener("mouseout", function(){
 });
 
 // Функция расчета итоговой стоимости
-calcItem.addEventListener("click",resultPrice);
-function resultPrice(){
-  let quantityBlocks=+document.getElementById("quantityBlocks").value,
-  responsive=document.getElementById("responsive") ,
-  sliders=+document.getElementById("sliders").value,
-  addFunctional=document.getElementById("addFunctional"),
-  moreAnimation=document.getElementById("moreAnimation"),
-  sale=document.getElementById("sale"),
-  sum=0,res=document.querySelector(".order__cost")  ;
+// calcItem.addEventListener("click",resultPrice);
+// function resultPrice(){
+  
 
-  if(responsive.checked) sum+=(quantityBlocks*500);
-  if(addFunctional.checked) sum+=600;
-  if(moreAnimation.checked) sum+=400;
+//   if(responsive.checked) sum+=(quantityBlocks*500);
+//   if(addFunctional.checked) sum+=600;
+//   if(moreAnimation.checked) sum+=400;
 
-  sum=sum+sliders*600+quantityBlocks*400;
-  if(sale.checked) sum*=0.9;
-  res.innerHTML="";
-  res.insertAdjacentHTML("beforeend",`Приблизительная стоимость ${sum} рублей`);
-  orderItem.style.display="flex"
-}
+//   sum=sum+sliders*600+quantityBlocks*400;
+//   if(sale.checked) sum*=0.9;
+//   res.innerHTML="";
+//   res.insertAdjacentHTML("beforeend",`Приблизительная стоимость ${sum} рублей`);
+//   orderItem.style.display="flex"
+// }
 
 
 slides();
