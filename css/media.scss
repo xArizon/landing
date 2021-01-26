@@ -28,7 +28,7 @@
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
 	.header {
-		min-height: 0;
+		min-height: 550px;
 	}
 	.container {
 		max-width: 700px;
@@ -67,7 +67,7 @@
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 	.header {
-		min-height: 0;
+		min-height: 550px;
 		position: relative;
 		background: url(img/6mob.jpg);
 		background-repeat: no-repeat;
@@ -357,11 +357,11 @@
 /* Iphone 5 */
 @media (max-width: 320px) {
 	.header {
-		min-height: 300px;
+		min-height: 400px;
 	}
 	.container {
 		min-width: 200px;
-		min-height: 300px;
+		min-height: 350px;
 	}
 	.module {
 		&__menu {
