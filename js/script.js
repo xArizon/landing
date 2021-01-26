@@ -48,20 +48,20 @@ mainItem.addEventListener("mouseout", function(){
 });
 
 // Функция расчета итоговой стоимости
-// calcItem.addEventListener("click",resultPrice);
-// function resultPrice(){
+calcItem.addEventListener("click",resultPrice);
+function resultPrice(){
   
 
-//   if(responsive.checked) sum+=(quantityBlocks*500);
-//   if(addFunctional.checked) sum+=600;
-//   if(moreAnimation.checked) sum+=400;
+  if(responsive.checked) sum+=(quantityBlocks*500);
+  if(addFunctional.checked) sum+=600;
+  if(moreAnimation.checked) sum+=400;
 
-//   sum=sum+sliders*600+quantityBlocks*400;
-//   if(sale.checked) sum*=0.9;
-//   res.innerHTML="";
-//   res.insertAdjacentHTML("beforeend",`Приблизительная стоимость ${sum} рублей`);
-//   orderItem.style.display="flex"
-// }
+  sum=sum+sliders*600+quantityBlocks*400;
+  if(sale.checked) sum*=0.9;
+  res.innerHTML="";
+  res.insertAdjacentHTML("beforeend",`Приблизительная стоимость ${sum} рублей`);
+  orderItem.style.display="flex"
+}
 
 
 slides();
